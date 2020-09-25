@@ -11,10 +11,9 @@ get_header();
       if(have_posts()){
         while(have_posts()){
           the_post();?>
-          <div class="col-md-4">
-        <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-        <p><?php the_excerpt() ?></p>
-        <p><a class="btn btn-secondary" href="<?php the_permalink() ?>" role="button">View details &raquo;</a></p>
+          <div class="col-md-12">
+        <h2><?php the_title() ?></h2>
+        <p><?php the_content() ?></p>
       </div>
       <?php
         }
