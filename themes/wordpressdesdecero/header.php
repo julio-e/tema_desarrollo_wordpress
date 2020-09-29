@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="author" content="<?php bloginfo('description') ?>">
     <meta name="generator" content="Jekyll v4.1.1">
     <title><?php bloginfo('name') ?></title>
 
@@ -31,17 +31,14 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="index.php"><?php bloginfo('name') ?></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-        <?php mostrar_menu() ?>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
+        <?php mostrar_menu_principal() ?>
     </ul>
     <form action="<?php bloginfo('url') ?>" method="get" class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" name="s" type="text" value= "<?php the_search_query(); ?>" placeholder="Buscar" aria-label="Buscar">
